@@ -1,0 +1,21 @@
+﻿POST /Service/Control HTTP/1.0
+HOST: 100.100.100.100:9000
+CONTENT-LENGTH: 321
+CONTENT-TYPE: text/xml; charset="utf-8"
+USER-AGENT: OS/1.0 UPnP/2.0 product/1.0
+SOAPACTION: "urn:schemas-upnp-org:service:ContentDirectory:1"
+
+<?xml version="1.0"?>
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+	<s:Body>
+		<u:Browse xmlns:u="urn:schemas-upnp-org:service:ContentDirectory:1">
+			<ObjectID>0</ObjectID>
+			<BrowseFlag>BrowseDirectChildren</BrowseFlag>
+			<Filter>*</Filter>
+			<StartingIndex>0</StartingIndex>
+			<RequestedCount>0</RequestedCount>
+			<SortCriteria></SortCriteria>
+		</u:Browse>
+	</s:Body>
+</s:Envelope>
